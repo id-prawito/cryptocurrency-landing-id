@@ -82,12 +82,14 @@ const sr = ScrollReveal({
     // reset: true
 });
 
-sr.reveal(`.home-swiper, .mark_content, .card_program, .content_footer`);
+sr.reveal(
+    `.home-swiper, .mark_content, .card_program, .content_footer, .section__title`
+);
 sr.reveal(`.content, .card, .review_content`, {
     interval: 200,
 });
 
-sr.reveal(`.about_us, .program_text, .text_copyright`, { origin: "left" });
-sr.reveal(`.about_gambar, .button_input-program, .social_media`, {
+sr.reveal(`.about_us, .program_text`, { origin: "left" });
+sr.reveal(`.about_gambar, .button_input-program`, {
     origin: "right",
 });
