@@ -911,6 +911,7 @@ input {
         flex-direction: row-reverse;
         height: 90vh;
         gap: 40px;
+        align-items: center;
     }
 
     .home_heading {

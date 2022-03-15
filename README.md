@@ -16,7 +16,7 @@ From your command line, first clone cryptocurrency-landing-id:
 
 ```bash
 # Clone the repository
-$ git clone https://github.com/id-prawito/html-css-id.git
+$ git clone https://github.com/id-prawito/cryptocurrency-landing-id.git
 
 # Move into the repository
 $ cd cryptocurrency-landing-id
