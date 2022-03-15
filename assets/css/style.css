@@ -909,9 +909,9 @@ input {
     .home__content {
         display: flex;
         flex-direction: row-reverse;
+        align-items: center;
         height: 90vh;
         gap: 40px;
-        align-items: center;
     }
 
     .home_heading {
