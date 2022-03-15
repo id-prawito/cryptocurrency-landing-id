@@ -72,3 +72,22 @@ function scrollActive() {
     });
 }
 window.addEventListener("scroll", scrollActive);
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2500,
+    delay: 400,
+    // reset: true
+});
+
+sr.reveal(`.home-swiper, .mark_content, .card_program, .content_footer`);
+sr.reveal(`.content, .card, .review_content`, {
+    interval: 200,
+});
+
+sr.reveal(`.about_us, .program_text, .text_copyright`, { origin: "left" });
+sr.reveal(`.about_gambar, .button_input-program, .social_media`, {
+    origin: "right",
+});
