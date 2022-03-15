@@ -90,6 +90,7 @@ input {
     top: 0;
     left: 0;
     z-index: 100;
+    transition: 0.8s ease-in-out;
 }
 
 /*=============== NAV ===============*/
@@ -143,7 +144,7 @@ input {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
     .nav__menu {
         position: fixed;
         width: 100%;
@@ -209,10 +210,11 @@ input {
 /* Change background header */
 .scroll-header {
     background: #06041f;
+    transition: 0.8s ease-in-out;
 }
 
 /* Active link */
-/* .active-link {
+.active-link {
     position: relative;
 }
 
@@ -220,12 +222,12 @@ input {
     content: '';
     position: absolute;
     bottom: -.75rem;
-    left: 45%;
-    width: 5px;
-    height: 5px;
+    /* left: 45%; */
+    width: 30px;
+    height: 3px;
     background-color: var(--primary-color);
-    border-radius: 50%;
-} */
+    border-radius: 20px;
+}
 
 
 /*=============== HOME ===============*/
@@ -292,6 +294,31 @@ input {
 .numb {
     font-size: 50px;
     font-weight: 400;
+    transition: .3s;
+}
+
+.tambahan {
+    display: inline-block;
+    background-color: #8b2a73;
+    color: var(--primary-color);
+    padding: 1rem 1.75rem;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    transition: .3s;
+    font-size: 12px;
+}
+
+.new__button {
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+    position: absolute;
+    bottom: 0;
+    right: -3rem;
+}
+
+.card:hover .new__button {
+    right: 0;
 }
 
 /* Swiper Class */
@@ -317,6 +344,8 @@ input {
     border-radius: .5rem;
 }
 
+
+
 /*=============== ADVANTAGES ===============*/
 .advantages_content,
 .packages_content {
@@ -328,6 +357,11 @@ input {
 
 .advantages_images {
     height: 100px;
+    transition: .3s;
+}
+
+.content:hover .advantages_images {
+    transform: translateY(-.5rem);
 }
 
 .content {
@@ -351,6 +385,7 @@ input {
 }
 
 
+
 /*=============== PACKAGES ===============*/
 .card {
     display: flex;
@@ -363,6 +398,8 @@ input {
     background: linear-gradient(136deg, #151053 0%, hsl(277deg 92% 8%) 100%);
     border-radius: 20px;
     padding: 40px 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 .text_numb {
@@ -394,6 +431,16 @@ input {
     color: var(--primary-color);
     border-radius: 30px;
     font-size: 12px;
+}
+
+.button_buy:hover {
+    border: 0.5px solid #6e6ec299;
+    background-color: #1d0745;
+}
+
+
+.card:hover .numb {
+    transform: translateY(-.5rem);
 }
 
 /*=============== ABOUT US ===============*/
@@ -640,9 +687,19 @@ input {
     border: 0.6px solid #797979;
 }
 
+.button--login:hover {
+    border: 0.5px solid #6e6ec299;
+    background-color: #1d0745;
+}
+
 .button---register {
     background-color: #4848dc;
     border: none;
+}
+
+.button--register:hover,
+.button--start_mining:hover {
+    background-color: rgb(73, 73, 182);
 }
 
 .copyright {
@@ -670,7 +727,7 @@ input {
 
 /*===============  BREAKPOINTS ===============*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
     .container {
         margin-left: 16px;
         margin-right: 16px;
@@ -678,9 +735,40 @@ input {
 }
 
 /* For medium devices */
-@media screen and (min-width: 576px) {}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .nav_menu {
+        grid-template-columns: repeat(5, auto);
+    }
+}
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 720px) and (max-width: 992px) {
+    .advantages_content {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .home_number {
+        flex-direction: row;
+    }
+
+    .home {
+        height: 80vh;
+    }
+
+    .packages_content {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .content_review {
+        flex-direction: row;
+    }
+
+    .nav_menu {
+        grid-template-columns: repeat(5, auto);
+    }
+
+}
+
+@media screen and (min-width: 992px) {
     body {
         margin: 0;
     }
@@ -711,7 +799,56 @@ input {
 }
 
 /* For large devices */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+    .container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .home_number {
+        flex-direction: row;
+    }
+
+    .home {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .advantages_content,
+    .packages_content {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .content_footer {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .nav_menu {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    .content_review {
+        flex-direction: row;
+    }
+
+    .about_content {
+        flex-direction: row;
+    }
+
+    .about_content {
+        align-items: center;
+    }
+
+    .about_img {
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1280px) {
     .container {
         margin-left: auto;
         margin-right: auto;
@@ -760,6 +897,7 @@ input {
 
     .numb {
         font-size: 40px;
+        transition: .3s;
     }
 
     .swiper-pagination {
@@ -784,7 +922,7 @@ input {
     .text_desc {
         font-size: 14px;
         color: #797979;
-        text-align: start;
+        text-align: center;
         width: auto;
     }
 
