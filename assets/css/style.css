@@ -233,7 +233,7 @@ input {
 
 /*=============== HOME ================*/
 .home {
-    height: 120vh;
+    height: 110vh;
 }
 
 .home__content {
@@ -769,12 +769,31 @@ input {
 
 /*===============  BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 415px) {
+    .inputnya {
+        width: 49%;
+    }
+
+    .home {
+        height: 100vh;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .container {
         margin-right: 16px;
         margin-left: 16px;
     }
+
+    .home {
+        height: 100vh;
+    }
+
+    .nav_menu {
+        grid-template-columns: repeat(5, auto);
+    }
 }
+
 
 /* For medium devices */
 @media screen and (min-width: 480px) and (max-width: 768px) {
